@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 using System.IO;
 
-namespace NathansCRUDWebsite
+namespace JaredsCRUDWebsite
 {
     public class Program
     {
@@ -17,9 +17,9 @@ namespace NathansCRUDWebsite
         {
             string connectionKey = File.ReadAllText("appsettings.json");
             JObject jsonObject = JObject.Parse(connectionKey);
-            JToken token = jsonObject["DefaultConnection"];
+            JToken token = jsonObject["ConnectionStrings"]["bestbuy"];
             string connString = token.ToString();
-            ProductRepo.connectionString = connString;
+            
             
 
             CreateHostBuilder(args).Build().Run();

@@ -1,14 +1,17 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
-using NathansCRUDWebsite.Models;
+using JaredsCRUDWebsite.Models;
 using MySql.Data.MySqlClient;
+using JaredsCRUDWebsite.Models;
 
-namespace NathansCRUDWebsite
+namespace JaredsCRUDWebsite
 {
-    public class ProductRepo
+    public interface IProductRepository
     {
-        public static string connectionString;
+        string connectionString { get; }
+
+        public IEnumerable<Product> GetAllProducts();
 
         public List<Product> GetProducts()
         {
