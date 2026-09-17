@@ -13,7 +13,4 @@
   <ItemGroup>
     <Compile Remove="Controllers\Employees.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\NewFolder\" />
-  </ItemGroup>
 </Project>
