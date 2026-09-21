@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using JaredsCRUDWebsite.Models;
+﻿using JaredsCRUDWebsite.Models;
+using System.Collections.Generic;
+using Testing.Models;
 
 namespace JaredsCRUDWebsite
 {
@@ -9,5 +10,9 @@ namespace JaredsCRUDWebsite
         Product GetProduct(int id);
 
         void UpdateProduct(Product product);
+
+        public void InsertProduct(Product productToInsert);
+        public IEnumerable<Category> GetCategories();
+        public Product AssignCategory();
     }
 }
